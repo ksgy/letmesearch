@@ -8,10 +8,6 @@
  * Controller of the letmesearchApp
  */
 angular.module('letmesearchApp')
-  .controller('SearchCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('SearchCtrl', function (searchservice) {
+    this.search = searchservice.search;
   });

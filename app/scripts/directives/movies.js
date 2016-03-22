@@ -9,10 +9,10 @@
 angular.module('letmesearchApp')
   .directive('movies', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'views/movies.html',
       restrict: 'E',
+      controller: 'MoviesCtrl as movies',
       link: function postLink(scope, element, attrs) {
-        element.text('this is the movies directive');
       }
     };
   });

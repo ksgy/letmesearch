@@ -1,1 +1,11 @@
-<p>This is the movies view.</p>
+<section>
+  <h1>Movies</h1>
+  <ul>
+    <li ng-repeat="movie in movies.moviesList() track by $index">
+      <img ng-if="movie.poster_path" ng-src="{{movie.poster_path}}" alt="">
+      <h2>{{ movie.original_title }}</h2>
+      <p>{{ movie.overview }}</p>
+      <span class="date">{{ movie.release_date }}</span>
+    </li>
+  </ul>
+</section>

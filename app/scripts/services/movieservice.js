@@ -10,23 +10,30 @@
 angular.module('letmesearchApp')
   .service('movieservice', function ($q, settings) {
 
+    var movies = [];
     var service = {
-      getMovies: getMovies
+      getMovies: getMovies,
+      moviesList: moviesList
     };
 
     function getMovies(querystring){
 
       theMovieDb.common.api_key = settings.API_KEY;
 
-      var deferred = $q.defer();
       theMovieDb.search.getMovie({"query": querystring}, function(d) {
-        deferred.resolve(d);
+        // TODO check if not JSON
+        movies = JSON.parse(d).results;
+        // TODO pagination
       }, function(e) {
-        deferred.reject(d);
+        // TODO error handling
+        movies = [];
       });
 
-      return deferred.promise;
 
+    }
+
+    function moviesList(){
+      return movies
     }
 
     return service

@@ -9,10 +9,11 @@
 angular.module('letmesearchApp')
   .directive('search', function () {
     return {
-      template: '<div></div>',
+      templateUrl: 'views/search.html',
       restrict: 'E',
+      controller: 'SearchCtrl as search',
       link: function postLink(scope, element, attrs) {
-        element.text('this is the search directive');
+
       }
     };
   });
