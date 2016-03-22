@@ -12,6 +12,8 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/search.css">
+    <link rel="stylesheet" href="styles/movies.css">
     <!-- endbuild -->
   </head>
   <body ng-app="letmesearchApp">
@@ -21,20 +23,13 @@
 
     <!-- Add your site or application content here -->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
         <div class="container">
-          <div class="navbar-header">
+          <a class="navbar-brand" href="#/">letmesearch</a>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#/">Home</a></li>
+            <li><a ng-href="#/about">About</a></li>
+          </ul>
 
-            <a class="navbar-brand" href="#/">letmesearch</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,35 @@
+@import '_variables';
+
+.movies {
+  padding: $layout-padding;
+
+  h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+  }
+
+  > ul {
+    padding: $layout-padding;
+
+    > li {
+
+      margin-bottom: $layout-padding * 2;
+
+      h2 {
+        text-transform: uppercase;
+        font-size: 1.4em;
+      }
+      p {
+        font-size: 1em;
+        line-height: 1.2em;
+        text-align: left;
+      }
+      span.date {
+        font-style: italic;
+        color: lighten($brand-color, 30);
+      }
+
+
+    }
+  }
+}

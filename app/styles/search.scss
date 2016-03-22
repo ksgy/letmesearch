@@ -1,0 +1,22 @@
+@import '_variables';
+
+.search {
+  padding: $layout-padding;
+  display: flex;
+
+  input {
+    width: 100%;
+    margin: 0 auto 0 0;
+    padding: $layout-padding / 4;
+    font-size: 1.2em;
+  }
+
+  button {
+    background-color: $brand-color;
+    padding: $layout-padding / 4 $layout-padding;
+    font-size: 1.2em;
+    color: #fff;
+    border: 0
+  }
+
+}
