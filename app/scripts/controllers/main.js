@@ -8,10 +8,10 @@
  * Controller of the letmesearchApp
  */
 angular.module('letmesearchApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, movieservice) {
+    $scope.movies = [];
+    movieservice.getMovies('know').then(function(movieList) {
+      $scope.movies = movieList;
+    })
+
   });
